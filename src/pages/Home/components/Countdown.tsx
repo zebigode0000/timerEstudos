@@ -49,10 +49,10 @@ export function Countdown() {
     }, [minutes, seconds, activeCycle]);
 
     return (
-        <div className="font-mono text-9xl line-height-4 flex items-center gap-2 ">
+        <div className="font-semibold text-9xl line-height-4 flex items-center gap-2 ">
           <span className="bg-cinza-800 rounded-xl p-4">{minutes[0]}</span>
           <span className="bg-cinza-800 rounded-xl p-4">{minutes[1]}</span>
-          <span className="overflow-hidden flex justify-center text-ignite-300">
+          <span className="overflow-hidden flex justify-center text-blue-400">
             :
           </span>
           <span className="bg-cinza-800 rounded-xl p-4">{seconds[0]}</span>

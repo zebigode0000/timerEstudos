@@ -30,7 +30,7 @@ export function Home() {
     resolver: zodResolver(newCycleFormValidationSchema),
     defaultValues: {
       task: "",
-      minutesAmount: 0,
+      minutesAmount: 5,
     },
   });
 
@@ -72,7 +72,7 @@ export function Home() {
           <button
             type="submit"
             disabled={isSubmitDisabled}
-            className="flex w-full p-2 rounded-xl items-center justify-center gap-2 font-bold cursor-pointer bg-ignite-300 text-gray-100 hover:bg-ignite-500 disabled:bg-gray-400
+            className="flex w-full p-2 rounded-xl items-center justify-center gap-2 font-bold cursor-pointer bg-blue-400 text-gray-100 hover:bg-blue-400 disabled:bg-gray-400
     disabled:opacity-50
     disabled:cursor-not-allowed"
           >

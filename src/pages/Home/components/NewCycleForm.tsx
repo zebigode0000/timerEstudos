@@ -12,8 +12,8 @@ export function NewCycleForm() {
           <label htmlFor="task">Vou trabalhar em</label>
           <input
             id="task"
-            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-ignite-300 focus:outline-none"
-            placeholder="De o nome para o seu projeto"
+            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-blue-400 focus:outline-none"
+            placeholder="Nome do Projeto"
             disabled={!!activeCycle}
             list="taks-sugestions"
             {...register("task")}
@@ -28,11 +28,11 @@ export function NewCycleForm() {
           <input
             id="minutesAmount"
             type="number"
-            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-ignite-300 focus:outline-none"
+            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-blue-400 focus:outline-none"
             placeholder="00"
             disabled={!!activeCycle}
             step={5}
-            min={1}
+            min={0}
             max={60}
             {...register("minutesAmount", { valueAsNumber: true })}
           />
