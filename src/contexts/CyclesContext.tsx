@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useState, useReducer, useEffect,  } from 'react'
+import { createContext, type ReactNode, useState, useReducer, useEffect,  } from 'react'
 import { type Cycle, cyclesReducer } from '../reducers/cycles/reducer'
-import { ActionTypes, addNewCycleAction, markCurrentCycleAsFinishedAction, interruptCurrentCycleAction } from '../reducers/cycles/actions'
+import { addNewCycleAction, markCurrentCycleAsFinishedAction, interruptCurrentCycleAction } from '../reducers/cycles/actions'
 import { differenceInSeconds } from 'date-fns'
 
 interface CreateCycleData {
@@ -19,6 +19,7 @@ interface CyclesContextType {
   interruptCurrentCycle: () => void
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const CyclesContext = createContext({} as CyclesContextType)
 
 interface CyclesContextProviderProps {
