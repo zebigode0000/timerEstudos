@@ -1,0 +1,43 @@
+import { useFormContext } from "react-hook-form";
+import { useContext } from "react";
+import { CyclesContext } from "../../../contexts/CyclesContext";
+
+export function NewCycleForm() {
+
+    const { activeCycle } = useContext(CyclesContext);
+    const { register } = useFormContext();
+
+    return (
+        <div className="w-full flex items-center justify-center gap-2 font-bold text-xl flex-wrap">
+          <label htmlFor="task">Vou trabalhar em</label>
+          <input
+            id="task"
+            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-ignite-300 focus:outline-none"
+            placeholder="De o nome para o seu projeto"
+            disabled={!!activeCycle}
+            list="taks-sugestions"
+            {...register("task")}
+          />
+          <datalist id="taks-sugestions">
+            <option value="Projeto 1" />
+            <option value="Projeto 2" />
+            <option value="Projeto 3" />
+          </datalist>
+
+          <label htmlFor="minutesAmount">durante</label>
+          <input
+            id="minutesAmount"
+            type="number"
+            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-ignite-300 focus:outline-none"
+            placeholder="00"
+            disabled={!!activeCycle}
+            step={5}
+            min={1}
+            max={60}
+            {...register("minutesAmount", { valueAsNumber: true })}
+          />
+
+          <span>minutos.</span>
+        </div>
+    )
+}
