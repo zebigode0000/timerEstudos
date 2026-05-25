@@ -8,11 +8,11 @@ export function NewCycleForm() {
     const { register } = useFormContext();
 
     return (
-        <div className="w-full flex items-center justify-center gap-2 font-bold text-xl flex-wrap">
+        <div className="w-full flex items-center justify-center gap-2 font-bold text-sm sm:text-xl flex-wrap text-center">
           <label htmlFor="task">Vou trabalhar em</label>
           <input
             id="task"
-            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-blue-400 focus:outline-none"
+            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 min-w-[150px] focus:shadow-none focus:border-blue-400 focus:outline-none"
             placeholder="Nome do Projeto"
             disabled={!!activeCycle}
             list="taks-sugestions"
@@ -28,7 +28,7 @@ export function NewCycleForm() {
           <input
             id="minutesAmount"
             type="number"
-            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 flex-1 focus:shadow-none focus:border-blue-400 focus:outline-none"
+            className="bg-transparent border-0 h-6 border-b-2 border-gray-500 font-bold pb-2 w-16 focus:shadow-none focus:border-blue-400 focus:outline-none text-center"
             placeholder="00"
             disabled={!!activeCycle}
             step={5}
